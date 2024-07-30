@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as fabric from "fabric";
 
-const New: React.FC = () => {
+const Home: React.FC = () => {
   const [canvas, setCanvas] = useState<fabric.Canvas | null>(null);
 
   useEffect(() => {
@@ -167,4 +167,4 @@ const New: React.FC = () => {
   );
 };
 
-export default New;
+export default Home;
