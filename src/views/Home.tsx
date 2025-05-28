@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     const canvasInstance = new fabric.Canvas("canvas");
     setCanvas(canvasInstance);
 
-    // Cleanup function to dispose the canvas
+
     return () => {
       canvasInstance.dispose();
     };
@@ -23,8 +23,8 @@ const Home: React.FC = () => {
     if (!canvi) return;
     fabric.FabricImage.fromURL(url)
       .then((img) => {
-        const fixedWidth = 150; // Set your desired width
-        const fixedHeight = 150; // Set your desired height
+        const fixedWidth = 150; 
+        const fixedHeight = 150; 
 
         const scaleX = fixedWidth / img.width!;
         const scaleY = fixedHeight / img.height!;
@@ -63,12 +63,12 @@ const Home: React.FC = () => {
             const imgWidth = img.width!;
             const imgHeight = img.height!;
 
-            // Calculate the scale factors for width and height
+         
             const scaleX = canvasWidth / imgWidth;
             const scaleY = canvasHeight / imgHeight;
             const scale = Math.min(scaleX, scaleY);
 
-            // Set the scale and center the image
+   
             img.set({
               scaleX: scale,
               scaleY: scale,
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
     const dataURL = canvi.toDataURL({
       format: "png",
       quality: 1.0,
-      multiplier: 1, // Keeps the original size
+      multiplier: 1,
     });
     const link = document.createElement("a");
     link.href = dataURL;
